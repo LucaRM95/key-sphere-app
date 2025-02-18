@@ -1,32 +1,29 @@
-import { SymbolView, SymbolViewProps, SymbolWeight } from 'expo-symbols';
-import { StyleProp, ViewStyle } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { SymbolWeight } from 'expo-symbols';
+import { OpaqueColorValue, TextStyle } from 'react-native';
+
+type AntDesignIcons = keyof typeof AntDesign.glyphMap;
 
 export function IconSymbol({
   name,
   size = 24,
   color,
   style,
-  weight = 'regular',
+  weight,
 }: {
-  name: SymbolViewProps['name'];
+  name: AntDesignIcons;
   size?: number;
-  color: string;
-  style?: StyleProp<ViewStyle>;
+  color: string | OpaqueColorValue;
+  style?: TextStyle;
   weight?: SymbolWeight;
 }) {
   return (
-    <SymbolView
+    <AntDesign
       weight={weight}
-      tintColor={color}
-      resizeMode="scaleAspectFit"
+      color={color}
       name={name}
-      style={[
-        {
-          width: size,
-          height: size,
-        },
-        style,
-      ]}
+      size={size}
+      style={style}
     />
   );
 }
