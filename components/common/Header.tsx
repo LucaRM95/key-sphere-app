@@ -7,7 +7,7 @@ interface Props {
 
 const Header = ({ setModalVisible = () => {} }: Props) => {
   return (
-    <View style={styles.header}>
+    <View style={styles.lightHeader}>
       <Pressable
         onPress={setModalVisible}
       >
@@ -20,17 +20,17 @@ const Header = ({ setModalVisible = () => {} }: Props) => {
 };
 
 const styles = StyleSheet.create({
-  header: {
+  lightHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#272729",
+    backgroundColor: "white",
     paddingLeft: 10,
     paddingRight: 10,
-    paddingTop: 40,
-    height: 110,
-    elevation: 3,
-  },
+    paddingTop: 55,
+    height: 90,
+    elevation: 2,
+  }, 
   title: {
     fontSize: 18,
     fontWeight: "bold",

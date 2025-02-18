@@ -11,19 +11,25 @@ import Routes from "../routes/appRoutes";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-  console.log(colorScheme)
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: Colors["light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
             position: "absolute",
+            backgroundColor: "rgb(255, 255, 255)",
+            elevation: 0,
+            shadowOpacity: 0,
           },
-          default: {},
+          default: {
+            backgroundColor: "rgba(255, 255, 255, 0.7)",
+            elevation: 0,
+            shadowOpacity: 0,
+          },
         }),
       }}
     >

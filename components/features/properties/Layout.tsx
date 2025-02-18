@@ -7,7 +7,7 @@ const properties = [1, 2, 3, 4, 5];
 const PropertiesLayout = () => {
   return (
     <ScrollView style={styles.container}>
-      <Text style={{ fontWeight: "bold", color: "white", marginBottom: 25 }}>
+      <Text style={{ fontWeight: "bold", color: "black", marginBottom: 25 }}>
         You're watching {properties.length} properties
       </Text>
       {properties.map(( i ) => (
