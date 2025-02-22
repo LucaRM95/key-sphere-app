@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text } from "react-native";
 import PropertyCard from "./components/PropertyCard";
 
 const properties = [1, 2, 3, 4, 5];

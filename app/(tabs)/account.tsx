@@ -1,17 +1,17 @@
 import { StyleSheet } from "react-native";
+import { usePathname } from "expo-router";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/common/Header";
-import SearchLayout from "@/components/features/search/Layout";
-import { usePathname } from "expo-router";
+import AccountLayout from "@/components/features/account/Layout";
 
-export default function SearchScreen() {
+export default function AccountScreen() {
   const pathname = usePathname();
 
   return (
     <SafeAreaProvider>
       <Header pathname={pathname} />
       <SafeAreaView style={styles.container}>
-        <SearchLayout />
+        <AccountLayout />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -20,6 +20,7 @@ export default function SearchScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: "100%",
+    //height: "100%",
+    backgroundColor: "transparent",
   },
 });
